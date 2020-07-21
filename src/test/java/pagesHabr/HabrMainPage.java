@@ -26,7 +26,7 @@ public class HabrMainPage extends HabrBasePage{
 
     public HabrMainPage open() {
         driver.get(URL);
-        logger.info("Main page HABR is open");
+        logger.info("Main page is open");
         return new HabrMainPage(driver);
     }
 
@@ -36,13 +36,13 @@ public class HabrMainPage extends HabrBasePage{
 
     public HabrAuthPage auth() {
         driver.findElement(authBtn).click();
-        logger.info("Auth page HABR is open");
+        logger.info("Authorization page is open");
         return new HabrAuthPage();
     }
 
     public HabrRegPage reg() {
         driver.findElement(regBtn).click();
-        logger.info("Reg page HABR is open");
+        logger.info("Registration page is open");
         return new HabrRegPage();
     }
 
@@ -50,19 +50,19 @@ public class HabrMainPage extends HabrBasePage{
         driver.findElement(searchBtn).click();
         driver.findElement(searchField).sendKeys(myText);
         driver.findElement(searchField).sendKeys(Keys.ENTER);
-        logger.info("Search page HABR is open");
+        logger.info("Search page is open");
         return new HabrSearchPage();
     }
 
     public HabrUsersPage users() {
         driver.findElement(usersLink).click();
-        logger.info("Users page HABR is open");
+        logger.info("Users page is open");
         return new HabrUsersPage(driver);
     }
 
     public HabrMainPage openLangPopup() {
         driver.findElement(langBtn).click();
-        logger.info("Users page HABR is open");
+        logger.info("Change language popup is open");
         return new HabrMainPage(driver);
     }
 
@@ -72,13 +72,13 @@ public class HabrMainPage extends HabrBasePage{
 
     public HabrNewsPage news() {
         driver.findElement(newsLink).click();
-        logger.info("News page HABR is open");
+        logger.info("News page is open");
         return new HabrNewsPage(driver);
     }
 
     public HabrPostsPage posts() {
         driver.findElement(postsLink).click();
-        logger.info("Posts page HABR is open");
+        logger.info("Posts page is open");
         return new HabrPostsPage(driver);
     }
 

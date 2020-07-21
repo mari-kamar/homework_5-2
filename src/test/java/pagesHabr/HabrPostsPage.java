@@ -8,7 +8,7 @@ import java.util.List;
 
 public class HabrPostsPage extends HabrBasePage{
 
-    public List<WebElement> posts = driver.findElements(By.xpath("//li[contains(@class, 'content-list__item_post')]//h2[contains(@class, 'post__title')]"));
+    public List<WebElement> posts = driver.findElements(By.xpath("//h2[contains(@class, 'post__title')]/a"));
     private final String titlePostFirst = posts.get(0).getText();
     public List<WebElement> postAuthors = driver.findElements(By.xpath("//a[contains(@class, 'post__user-info user-info') and (@title='Автор публикации' )] "));
 
@@ -18,7 +18,7 @@ public class HabrPostsPage extends HabrBasePage{
 
     public HabrPostsPage openFirstPost() {
         posts.get(0).click();
-        logger.info("First Post HABR is open");
+        logger.info("First Post is open");
         return this;
     }
 
@@ -26,7 +26,7 @@ public class HabrPostsPage extends HabrBasePage{
 
     public HabrPostsPage openPostAuthor() {
         postAuthors.get(0).click();
-        logger.info("First post author info is open");
+        logger.info("First post author's info is open");
         return this;
     }
 }
